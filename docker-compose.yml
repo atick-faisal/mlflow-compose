@@ -90,8 +90,13 @@ services:
       interval: 10s
       timeout: 5s
       retries: 30
+    networks:
+      - default
+      - dokploy-network
 
 networks:
   default:
     name: mlflow-network
     external: false
+  dokploy-network:
+    external: true
