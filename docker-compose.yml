@@ -7,7 +7,7 @@ services:
     container_name: mlflow-storage
     environment:
       RUSTFS_ADDRESS: :9000
-      RUSTFS_SERVER_DOMAINS: storage:9000
+      RUSTFS_SERVER_DOMAINS: mlflow-storage:9000
       RUSTFS_REGION: ${AWS_DEFAULT_REGION:-us-east-1}
       RUSTFS_ACCESS_KEY: ${AWS_ACCESS_KEY_ID}
       RUSTFS_SECRET_KEY: ${AWS_SECRET_ACCESS_KEY}
